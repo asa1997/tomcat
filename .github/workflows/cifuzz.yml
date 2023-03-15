@@ -9,12 +9,12 @@ jobs:
      uses: google/oss-fuzz/infra/cifuzz/actions/build_fuzzers@master
      with:
        oss-fuzz-project-name: 'tomcat'
-       language: jvm-1.8
+       language: jvm
    - name: Run Fuzzers
      uses: google/oss-fuzz/infra/cifuzz/actions/run_fuzzers@master
      with:
        oss-fuzz-project-name: 'tomcat'
-       language: jvm-1.8
+       language: jvm
        fuzz-seconds: 600
    - name: Upload Crash
      uses: actions/upload-artifact@v3
